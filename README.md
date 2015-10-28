@@ -1,4 +1,4 @@
-# Space Wapuu VR
+# VR Photo Practice
 
 [![Build Status](https://travis-ci.org/miya0001/vrphoto.svg)](https://travis-ci.org/miya0001/vrphoto)
 
