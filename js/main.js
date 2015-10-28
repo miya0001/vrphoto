@@ -13,7 +13,6 @@ function init() {
 }
 
 function animate( timestamp ) {
-    renderer.render( scene, camera );
     controls.update();
     manager.render( scene, camera, timestamp );
     requestAnimationFrame( animate );
