@@ -5,6 +5,7 @@ Session.vim
 .netrwhist
 *~
 .DS_Store
+gps.json
 lib
 npm-debug.log
-photo
+img/photo.jpg

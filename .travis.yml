@@ -1,10 +1,15 @@
+sudo: true
+
 language: node_js
 
 branches:
   only:
     - master
 
-before_script: bash ./bin/prepare.sh
+before_script:
+    - sudo apt-get install imagemagick
+    - sudo apt-get install graphicsmagick
+    - bash ./bin/prepare.sh
 
 script:
     - ls -al img/photo.jpg
