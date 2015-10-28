@@ -1,0 +1,17 @@
+language: node_js
+
+branches:
+  only:
+    - master
+
+before_script: bash ./bin/prepare.sh
+
+script:
+    - ls -al wapuu.json
+
+after_success: bash ./bin/deploy.sh
+
+env:
+  global:
+  - GH_REF: github.com/miya0001/vrphoto.git
+  - secure: "aHsWs2mh2ZG7+qeKaOUme4ZMC5PRji/AiFIvL2NV4d0tOTB9TAnIk//etqB0ceSUNW9Atl3YgfzsNl5jA8IscjV3R2V7gcf8M7KmeJ/fM4pc/Lc0ph1kWN21cAXrp+upyUDDiXuV3MQUY7Zu0sAapZKYPnF8XrUj9eYGqQv1OvbXayf7NHNSUa2V43f7dZU1GknrKJ6CA5KE4Q5dF9Yf5DTm8rLkaHapguBlWMsUsWdl8aLCnUORHNGJMfXaH/nNw4DfXylPs2QanvN/is/hdpuR1JOpJnCO0Z5zKK2H/G0fQn6R2LiqQUGDaO8MJAlBcC6/AwKeY/oHLU9PMGx2VbNQqyKsRCuHCa5YYfca16Xeqlbx2ZVpU9V79aqKs5KSUUfwwKycgYF2/D7fgi76hnViKirgS0yJ4JPuLN4WxFRUuNaK4zqW/e26mh5L/r59SDFo5Ln2X6NC/fPpsNhSbllD2aDKqlTWUYoFHNsDfhUFi/rbVtxGTqGVWxL+sNcbGLFvbEiw+81ivt+SZ74yoKZDgQxk6llhsjkp8ZVPJiutijowlNgYND6xKNy4+mIZjRC5l2L2qDkZmRsT8ysJ9tu8mdLxhdgadKP3FNXiATend3hxI3p9uqbUBkO9B5hx0elX5IX46P8DwlbvJuegVWYIYPIiyUvhPaOgBqp4uRQ="

@@ -1,0 +1,7 @@
+{
+  "name": "vrphoto",
+  "dependencies": {
+    "threejs": "*",
+    "webvr-polyfill": "*"
+  }
+}

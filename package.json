@@ -1,0 +1,24 @@
+{
+  "name": "vrphoto",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "build": "./node_modules/bower/bin/bower install",
+    "start": "./node_modules/http-server/bin/http-server -c1 -o",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miya0001/vrphoto.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miya0001/vrphoto/issues"
+  },
+  "homepage": "https://github.com/miya0001/vrphoto#readme",
+  "devDependencies": {
+    "bower": "^1.6.5",
+    "http-server": "^0.8.5"
+  }
+}
