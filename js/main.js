@@ -33,6 +33,25 @@ function init() {
 
     scene.add( sphere );
 
+    var pgeometry = new THREE.Geometry();
+    for ( var n = 0; n < 10000; n++ ) {
+        var vertex = new THREE.Vector3();
+        vertex.x = ( Math.random() - 0.5 ) * 10;
+        vertex.y = ( Math.random() + 0.1 ) * 10;
+        vertex.z = ( Math.random() - 0.5 ) * 10;
+        pgeometry.vertices.push( vertex );
+    }
+    var pmaterial = new THREE.PointsMaterial( {
+        size: 0.01,
+        color: 0xFFFFE0,
+        blending: THREE.AdditiveBlending,
+        transparent: true,
+        fog: true
+    } );
+    var particles = new THREE.Points( pgeometry, pmaterial );
+    particles.fog = new THREE.FogExp2( 0xffffff, 1 );
+    scene.add( particles );
+
     animate();
 }
 
@@ -40,4 +59,25 @@ function animate( timestamp ) {
     controls.update();
     manager.render( scene, camera, timestamp );
     requestAnimationFrame( animate );
+}
+
+function add_cosmos( scene ) {
+    var pgeometry = new THREE.Geometry();
+    for ( var n = 0; n < 1000; n++ ) {
+        var vertex = new THREE.Vector3();
+        vertex.x = ( Math.random() - 0.5 ) * 100;
+        vertex.y = ( Math.random() - 0.5 ) * 100;
+        vertex.z = ( Math.random() - 0.5 ) * 100;
+        pgeometry.vertices.push( vertex );
+    }
+    var pmaterial = new THREE.PointsMaterial( {
+        size: 0.01,
+        color: 0xFFFFE0,
+        blending: THREE.AdditiveBlending,
+        transparent: true,
+        fog: true
+    } );
+    var particles = new THREE.Points( pgeometry, pmaterial );
+    particles.fog = new THREE.FogExp2( 0xffffff, 1 );
+    scene.add( particles );
 }
