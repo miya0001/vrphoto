@@ -47,19 +47,6 @@ gulp.task( 'exif', function () {
         .pipe( gulp.dest( './' ) );
 } );
 
-gulp.task( 'exifshort', function () {
-    return gulp.src( 'img/photo.jpg' )
-        .pipe( exif() )
-        .pipe( data( function ( file ) {
-            var filename = file.path.substring( file.path.lastIndexOf( '/' ) + 1 ),
-                data = {};
-            data[filename] = file.exif.gps;
-            file.contents = new Buffer( JSON.stringify( data ) );
-        } ) )
-        .pipe( extend( 'gpsshort.json', true, '    ' ) )
-        .pipe( gulp.dest( './' ) );
-} );
-
 gulp.task( 'resize', ['exif'], function () {
     gulp.src( 'panorama/photo.jpg' )
         .pipe( imageResize( {
