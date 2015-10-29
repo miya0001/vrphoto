@@ -27,7 +27,7 @@ function gpsDecimal( direction, degrees, minutes, seconds ) {
 }
 
 gulp.task( 'exif', function () {
-    return gulp.src( './img/photo.jpg' )
+    return gulp.src( 'img/photo.jpg' )
         .pipe( exif() )
         .pipe( data( function ( file ) {
             var filename = file.path.substring( file.path.lastIndexOf( '/' ) + 1 ),
@@ -48,7 +48,7 @@ gulp.task( 'exif', function () {
 } );
 
 gulp.task( 'exifshort', function () {
-    return gulp.src( './img/photo.jpg' )
+    return gulp.src( 'img/photo.jpg' )
         .pipe( exif() )
         .pipe( data( function ( file ) {
             var filename = file.path.substring( file.path.lastIndexOf( '/' ) + 1 ),
@@ -63,7 +63,7 @@ gulp.task( 'exifshort', function () {
 gulp.task( 'resize', ['exif'], function () {
     gulp.src( 'panorama/photo.jpg' )
         .pipe( imageResize( {
-            width : 2048,
+            width : 4096,
             crop : false,
             upscale : false
         } ) )
