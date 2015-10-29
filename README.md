@@ -12,6 +12,11 @@ $ npm run build
 $ npm start
 ```
 
+### Build requires
+
+* imagemagick
+* graphicsmagick
+
 ## Thanks
 
 * https://github.com/borismus/webvr-boilerplate
