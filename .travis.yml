@@ -1,22 +1,15 @@
 sudo: true
-
 language: node_js
-
 branches:
   only:
-    - master
-
+  - master
 before_script:
-    - sudo apt-get install imagemagick
-    - sudo apt-get install graphicsmagick
-    - bash ./bin/prepare.sh
-
+- sudo apt-get install imagemagick
+- sudo apt-get install graphicsmagick
+- bash ./bin/prepare.sh
 script:
-    - ls -al img/photo.jpg
-
+- ls -al img/photo.jpg
 after_success: bash ./bin/deploy.sh
-
 env:
   global:
-  - GH_REF: github.com/miya0001/vrphoto.git
-  - secure: "GahItDxrjjV5xHt7XU6mqDkNMVY/OBSy2Ebj86gxUG/2hwRJN07ftDeVe8jhzygq+nPHjtQhWLB3hj2T9njfhCR6GPQeHSy42VwhMZo/45HHXW3tt42646vWZVqaBZN0oLNfLtDA8YvtJIwiwhtcCYCkNcDhvPIqo2fKOwM2kcS3Gzpc3lT+hkKoOmm+JvdGsWjJj61ACDEKVJgX1a5L4DhnWMIOmyL1MyNX9PO+Kpgx8ZlrTMllFIEdgL1gVvKDTsJvjJX4rsMkoVDsSiG/YhIk47hmkTHU19IAgTmO8kcuH7aArjHcUQKDubLK4YHS+QEIeMSoQwCfYSbGwoGLI8KoQ55RWKq9J2j4xqT/kcDJpdv6//wIhyIQcWcrwR6FhroebJb+fzBBg6ielkY5pta0+WeR3eetpIRmqj2vb66Q//WKluCZh+CUKrkxkxV0JcPyM2q4eunr8WBtepfjLb5jBP61IDTvQEMFo1OlelP726r7J6qk9+9bXUD+SGf4C/bWJMAvLVmB9/m7FpvpBzgsRf2fXt+XhBpnA4I08UnUgkvdYKYVbX8mXHbXPSXEt7nQ0VzZ74qzpOvmYYh6YlXhZhc4avPAwNElb/2B7OEeETuUqroAbl9GlnVx+1UBB+ErqdniigNen6Gk4a4veWJ4f9MqjM1cW1blAZKKmh0="
+    secure: PRTnTWX8EDGjibIL/Q/S0b4xPdczAXuSBPNDz6DaG/2KXQ5ci/TWOpRmBNZQUdzfaf/1IdaxsDwFfcKq8mgBrPQrSKDkFFa8GHQh7DjCj2iPh81iqrbTO13yCSSJn88dWY8PghP1t35Qwowx34Cwuultw0F8pTkb0rU2cL4jS/Ez3sC4DUKhpXUpOy099QCyGutOTMFwgUcTpD6ZGZKlyeXOmJW0UC06ix1lWI7AFVbpiEsUY0psRIF/hFli4LTDLwSV/YQ3SQcgMDNGjVxDEN2EmVqMgiRWad6c4jIwuEE63qgHoyR1T6ui3XnsQLl1QaBr4JiGL90Qn+gvYkoGxDGL8JJwZP2e1fUeTz5AqTCe5Wd0utX1R/DS9T7wSTLti3MhyHSCiv/Z9z5AcuPOjHEp/J4aiMwp7mKQFzRri4ysCx292rmSrIbsdKcSdJ/9piDEW7rVT9K39CoAu2Jyc+CRVBeN2eL0FrYkYA6KCM5VlfeQgbjJByCusd8WSPyV/TuDLfj/p1oIKDC2yhuPftv7rqdAsplUJbLIcCMksYBbFru/h33UVAnsc6fcsyvZ1EiVv9XDcJqqtBqXGN/hMyyq0EwBHt0dWd9Re2qEThWIr3k0cTySy18pwO764oZxJJwAKRJVthn1dpwJAMunYZp2oNq0KJ035PY9xM5Zz9w=
