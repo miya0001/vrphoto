@@ -4,6 +4,7 @@ branches:
   only:
   - master
 before_script:
+- sudo apt-get update
 - sudo apt-get install imagemagick
 - sudo apt-get install graphicsmagick
 - bash ./bin/prepare.sh
