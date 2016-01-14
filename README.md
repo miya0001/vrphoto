@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/miya0001/vrphoto.svg)](https://travis-ci.org/miya0001/vrphoto)
 
+DEMO: http://miya0001.github.io/vrphoto/
+
 ## How to build
 
 ```
