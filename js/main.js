@@ -11,8 +11,8 @@ effect = new THREE.VREffect( renderer );
 effect.setSize( window.innerWidth, window.innerHeight );
 manager = new WebVRManager( renderer, effect, { hideButton: false } );
 
-// In the future
-// var heading;
+// for future
+// var heading = 0;
 // if ( navigator.geolocation ) {
 //     navigator.geolocation.getCurrentPosition( function( pos ){
 //         heading = pos.coords.heading;
@@ -24,7 +24,7 @@ init();
 function init() {
     var texloader = new THREE.TextureLoader();
     var sphere = new THREE.Mesh(
-        new THREE.SphereGeometry( 100, 20, 20 ),
+        new THREE.SphereGeometry( 20, 32, 24, 0 ), // Note: Math.PI * 2 = 360
         new THREE.MeshBasicMaterial( {
             map: texloader.load( 'img/photo.jpg' )
         } )
