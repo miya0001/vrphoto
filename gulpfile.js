@@ -39,7 +39,7 @@ gulp.task( 'exif', function () {
                 lat: calcLat.apply( null, exif.GPSLatitude ),
                 lng: calcLng.apply( null, exif.GPSLongitude ),
                 alt: exif.GPSAltitude,
-                dir: exif.GPSImageDirection
+                dir: exif.GPSImgDirection
             };
             file.contents = new Buffer( JSON.stringify( data ) );
         } ) )
